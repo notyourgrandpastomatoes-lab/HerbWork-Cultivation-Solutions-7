@@ -1,0 +1,6 @@
+{
+  "name": "HerbWork Cultivation Solutions",
+  "description": "Premium commercial cannabis cultivation, automation, compliance, and AI consulting services led by Sean Skalsvik.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
