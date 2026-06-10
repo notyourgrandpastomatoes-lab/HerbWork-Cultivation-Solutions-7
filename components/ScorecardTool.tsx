@@ -267,6 +267,21 @@ export default function ScorecardTool() {
     setInsights(scorecardInsights);
 
     try {
+      await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: leadData.name,
+          company: leadData.company,
+          email: leadData.email,
+          phone: leadData.phone,
+          facilitySize: leadData.facilitySize,
+          scorecardAnswers: answers,
+          calculatedScore: finalScore,
+          insights: scorecardInsights
+        }),
+      });
+
       // POST scorecard results to Formspree
       await fetch("https://formspree.io/f/xykapdre", {
         method: "POST",
